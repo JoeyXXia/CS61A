@@ -1,5 +1,6 @@
 from operator import add, sub
 
+
 def a_plus_abs_b(a, b):
     """Return a+abs(b), but without calling abs.
 
@@ -37,7 +38,7 @@ def two_of_three(x, y, z):
     >>> [type(x).__name__ for x in ast.parse(inspect.getsource(two_of_three)).body[0].body]
     ['Expr', 'Return']
     """
-    return x**2 + y**2 + z**2 - max(x, y, z)**2
+    return x ** 2 + y ** 2 + z ** 2 - max(x, y, z) ** 2
 
 
 def largest_factor(x):
@@ -51,7 +52,7 @@ def largest_factor(x):
     1
     """
     "*** YOUR CODE HERE ***"
-    for i in range(x//2, 0, -1):
+    for i in range(x // 2, 0, -1):
         if x % i == 0:
             return i
 
@@ -87,6 +88,7 @@ def with_if_statement():
     else:
         return false_func()
 
+
 def with_if_function():
     """
     >>> result = with_if_function()
@@ -97,13 +99,16 @@ def with_if_function():
     """
     return if_function(cond(), true_func(), false_func())
 
+
 def cond():
     "*** YOUR CODE HERE ***"
     return False
 
+
 def true_func():
     "*** YOUR CODE HERE ***"
     print(42)
+
 
 def false_func():
     "*** YOUR CODE HERE ***"
@@ -132,8 +137,7 @@ def hailstone(x):
         if x % 2 == 0:
             x //= 2
         else:
-            x = 3*x + 1
+            x = 3 * x + 1
         step += 1
     print(1)
     return step
-
